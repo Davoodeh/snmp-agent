@@ -1,16 +1,16 @@
 # snmp-agent
 **SETTING UP ENVIRONMENT
 **
-darina@MacBook-Air:~$ mkdir appl
-darina@MacBook-Air:~$ cd appl/
-darina@MacBook-Air:~/appl$ mkdir project
-darina@MacBook-Air:~/appl$ cd project/
+mkdir appl
+cd appl/
+mkdir project
+cd project/
 
-darina@MacBook-Air:~/appl/project$ pip3 install pysnmp
-darina@MacBook-Air:~/appl/project$ pip3 install psutil
-darina@MacBook-Air:~/appl/project$ pip3 install pysnmp_mibs
+pip3 install pysnmp
+pip3 install psutil
+pip3 install pysnmp_mibs
 
-darina@MacBook-Air:~/appl/project$ $ brew install libsmi
+brew install libsmi
 
 I have something I already made, I created a MIB file "~/appl/project$ vim MY-MIB.txt "
 and then compiled it using "smidump -k -f python -o my-mib.py MY-MIB.txt" - works, then to implement the agent I ran "my_snmp-agent.py"
