@@ -1,0 +1,37 @@
+MY-MIB DEFINITIONS ::= BEGIN
+  IMPORTS
+      MODULE-IDENTITY, OBJECT-TYPE, Integer32 
+      FROM SNMPv2-SMI;
+  
+  myMIB MODULE-IDENTITY
+      LAST-UPDATED "202401260000Z"
+      ORGANIZATION "MyOrganization"
+      CONTACT-INFO "email@example.com"
+      DESCRIPTION "MIB for custom SNMP agent"
+      REVISION "202401260000Z"
+      DESCRIPTION "This custom version MIB"
+      ::= { enterprises 9999 }
+
+  enterprises OBJECT IDENTIFIER ::= { iso(1) org(3) dod(6) internet(1) private(4) enterprises(1) }
+
+  memoryUtil OBJECT-TYPE
+      SYNTAX Integer32
+      MAX-ACCESS read-only
+      STATUS current
+      DESCRIPTION "Memory Utilization in percentage"
+      ::= { myMIB 1 }
+
+  cpuUtil OBJECT-TYPE
+      SYNTAX Integer32
+      MAX-ACCESS read-only
+      STATUS current
+      DESCRIPTION "CPU Utilization in percentage"
+      ::= { myMIB 2 }
+
+  diskUtil OBJECT-TYPE
+      SYNTAX Integer32
+      MAX-ACCESS read-only
+      STATUS current
+      DESCRIPTION "Disk Utilization in percentage"
+      ::= { myMIB 3 }
+END
