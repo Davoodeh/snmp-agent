@@ -1,6 +1,5 @@
 # snmp-agent
-**SETTING UP ENVIRONMENT
-**
+**SETTING UP ENVIRONMENT**
 mkdir appl
 cd appl/
 mkdir project
