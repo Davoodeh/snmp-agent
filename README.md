@@ -1,13 +1,7 @@
 # snmp-agent
 **SETTING UP ENVIRONMENT**
 
-mkdir appl
 
-cd appl/
-
-mkdir project
-
-cd project/
 
 pip3 install pysnmp
 
