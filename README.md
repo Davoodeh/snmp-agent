@@ -12,8 +12,21 @@ pip3 install pysnmp_mibs
 brew install libsmi
 
 
-I have something I already made, I created a MIB file "MY-MIB.txt "
-and then compiled it using "smidump -k -f python -o my-mib.py MY-MIB.txt" - works, then to implement the agent I ran "my_snmp-agent.py"
+**Starting my Agent in 1st Terminal:**
 
-to run the python i used "python3 my_snmp-agent.py" but I get the following error when I open a second terminal : “snmpget -v2c -c public 127.0.0.1 1.3.6.1.4.1.9999.1
-Timeout: No Response from 127.0.0.1." 
+python3 d-snmp.py 
+python3 d-snmp.py 
+INFO:root:SNMP Agent listening on port 1161
+DEBUG:root:Received data from ('127.0.0.1', 61826):
+
+
+**Testing with Net-SNMP and using debugging(-d) option in 2nd Terminal:**
+
+$ snmpget -v2c -c public -d 127.0.0.1:1161 1.3.6.1.4.1.2021.4.6.0
+No log handling enabled - using stderr logging
+
+**Starting tcpdump in 3rd Terminal:**
+
+sudo tcpdump -i any port 1161 -vv
+tcpdump: data link type PKTAP
+
