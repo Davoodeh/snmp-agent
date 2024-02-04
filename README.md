@@ -13,8 +13,6 @@ brew install libsmi
 
 python3 d-snmp.py 
 
-python3 d-snmp.py 
-
 INFO:root:SNMP Agent listening on port 1161
 
 DEBUG:root:Received data from ('127.0.0.1', 61826):
