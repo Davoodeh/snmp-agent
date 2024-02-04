@@ -20,7 +20,7 @@ DEBUG:root:Received data from ('127.0.0.1', 61826):
 
 **Testing with Net-SNMP and using debugging(-d) option in 2nd Terminal:**
 
-$ snmpget -v2c -c public -d 127.0.0.1:1161 1.3.6.1.4.1.2021.4.6.0
+snmpget -v2c -c public -d 127.0.0.1:1161 1.3.6.1.4.1.2021.4.6.0
 
 No log handling enabled - using stderr logging
 
