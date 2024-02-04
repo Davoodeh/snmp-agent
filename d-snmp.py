@@ -36,7 +36,7 @@ class SNMPAgent:
                     logging.error(f"Error processing packet: {e}")
 
     def parse_snmp_packet(self, packet):
-        version = packet[3]  # Adjust based on your packet's structure
+        version = packet[3]  
 
         community_end_index = packet.find(b'\xa0') 
         community = packet[6:community_end_index].decode('utf-8')
