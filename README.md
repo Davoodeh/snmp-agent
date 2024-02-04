@@ -28,5 +28,7 @@ No log handling enabled - using stderr logging
 
 sudo tcpdump -i any port 1161 -vv
 
+Mac: sudo tcpdump -i lo0 port 1161 -vv
+
 tcpdump: data link type PKTAP
 
